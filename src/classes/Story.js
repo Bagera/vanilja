@@ -260,12 +260,10 @@ class Story {
      *
      * @event vanilja:story:started
      */
-    const startedEvent = new CustomEvent("vanilja:story:started", {
-      detail: {
-        story: this,
-      },
+    Utils.event("story:started", {
+      story: this,
     });
-    window.dispatchEvent(startedEvent);
+    
 
     /* Try to restore based on the window hash if possible. */
 
@@ -413,12 +411,9 @@ class Story {
      *
      * @event vanilja:story:shown
      */
-    const shownEvent = new CustomEvent("vanilja:story:shown", {
-      detail: {
-        passage: passage,
-      },
+    Utils.event("story:shown", {
+      passage: passage,
     });
-    window.dispatchEvent(shownEvent);
   }
 
   /**
