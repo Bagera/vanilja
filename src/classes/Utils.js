@@ -114,9 +114,10 @@ class Utils {
  * @param {Element} [emitter=document.querySelector("tw-story")]
  * @memberof Utils
  */
-static event(name, detail, emitter = document.querySelector("tw-story")) {
+static event(name, detail, emitter = document.querySelector("tw-story"), bubbles = true) {
     const newEvent = new CustomEvent("vanilja:" + name, {
       detail,
+      bubbles: bubbles
     });
     emitter.dispatchEvent(newEvent);
   }
