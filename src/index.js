@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-const snarkdown = (window.md = require("snarkdown"));
+const md = (window.md = require("snarkdown"));
 const Story = (window.Story = require("./classes/Story.js"));
 const Passage = (window.Passage = require("./classes/Passage.js"));
 const Utils = (window.Utils = require("./classes/Utils.js"));
